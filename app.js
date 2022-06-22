@@ -1,15 +1,16 @@
 var createError = require('http-errors');
-var express = require('express');
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
+const express = require('express');
 const { extname } = require('path');
 const { engine } = require('express-handlebars');
 //var hbs=require('express-handlebars');
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

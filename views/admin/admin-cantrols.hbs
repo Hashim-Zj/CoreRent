@@ -1,5 +1,6 @@
 <section>
-    <div class="container mt-3 mx-auto d-flex align-items-center justify-content-center">
+    
+    <div class="container mt-3 mx-auto d-flex align-items-center justify-content-center navtab">
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -24,5 +25,34 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
         </ul>
+    </div>
+    <div class="container ">
+        <div class="row d-flex justify-content-end">
+            <a href="/admin/add-product" class="btn btn-success mt-4 w-auto ml-auto ">Add Products</a>
+        </div>
+    <table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Catogory</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Price</th>
+      <th scope="col">image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.name}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.Stock}}</td>
+      <td>{{this.price}}</td>
+      <td><img style="width: ;25px;height: 25px;" src="{{this.image}}" alt=""></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
     </div>
 </section>
