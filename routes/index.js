@@ -26,11 +26,11 @@ router.get('/', function(req, res, next) {
       name:"Driller",
       category:"Tools",
       description:"Tis is toolbox",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLa4yVXvyxBmxNI5S_kcK3IB0X5GtZgiVxw&usqp=CAU",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQr9AbgTqvwQRbmE0JSwtgaJwaX04AGyK1Q&usqp=CAU",
     },
 
   ]
-  res.render('index', {products,admin:false})
+  res.render('user/index', {products,admin:false})
 });
 
 module.exports = router;

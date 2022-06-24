@@ -1,0 +1,19 @@
+.navtab{
+padding-top: 20px;
+
+}
+.search{
+ width: 200px;
+ height: fit-content;
+ margin: 10px;
+}
+.signin{
+  width: 20px;
+  height: fit-content;
+  margin: auto;
+}
+.search-input{
+
+  margin: 10px;
+}
+
