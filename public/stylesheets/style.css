@@ -1,25 +1,17 @@
 
 
-.img-slide{
-  width: 1200px;
-  height: 300px;
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
 }
-.navtab{
-padding-top: 20px;
-
+.h-custom {
+height: calc(100% - 73px);
 }
-.search{
- width: 200px;
- height: fit-content;
- margin: 10px;
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
 }
-.signin{
-  width: 20px;
-  height: fit-content;
-  margin: auto;
 }
-.search-input{
-
-  margin: 10px;
-}
-

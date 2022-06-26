@@ -3,7 +3,6 @@ const state = {
     db: null
 }
 
-
 module.exports.connect = (done) => {
     const url = 'mongodb://localhost:27017';
     const dbname = 'CoreRent';
@@ -15,7 +14,6 @@ module.exports.connect = (done) => {
         done();
     })
 }
-
 
 module.exports.get = () => {
     return state.db
