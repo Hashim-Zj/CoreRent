@@ -9,7 +9,7 @@
     <table class="table mt-3">
       <thead>
         <tr>
-          <th scope="col">No</th>
+          <th scope="col">No:</th>
           <th scope="col">Name</th>
           <th scope="col">Catogory</th>
           <th scope="col">Stock</th>
@@ -21,11 +21,11 @@
         {{#each products}}
         <tr>
           <th scope="row">1</th>
-          <td>{{this.name}}</td>
-          <td>{{this.category}}</td>
+          <td>{{this.Name}}</td>
+          <td>{{this.Category}}</td>
           <td>{{this.Stock}}</td>
-          <td>{{this.price}}</td>
-          <td><img style="width: ;25px;height: 25px;" src="{{this.image}}" alt=""></td>
+          <td>{{this.Price}}</td>
+          <td><img style="width: ;25px;height: 25px;" src="/images/product-images/{{this._id}}.jpeg" alt="v"></td>
         </tr>
         {{/each}}
       </tbody>

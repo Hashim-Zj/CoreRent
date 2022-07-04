@@ -1,4 +1,4 @@
-<section class="vh-100">
+<!--<section class="vh-100">
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
 
@@ -26,37 +26,37 @@
                     <p class="text-center">or:</p>
 
                     <!-- Name input -->
-                    <div class="form-outline mb-4">
+                   <!--  <div class="form-outline mb-4">
                         <input type="text" id="registerName" class="form-control" />
                         <label class="form-label" for="registerName">Name</label>
                     </div>
 
                     <!-- Username input -->
-                    <div class="form-outline mb-4">
+                    <!-- <div class="form-outline mb-4">
                         <input type="text" id="registerUsername" class="form-control" />
                         <label class="form-label" for="registerUsername">Username</label>
                     </div>
 
                     <!-- Email input -->
-                    <div class="form-outline mb-4">
+                    <!-- <div class="form-outline mb-4">
                         <input type="email" id="registerEmail" class="form-control" />
                         <label class="form-label" for="registerEmail">Email</label>
                     </div>
 
                     <!-- Password input -->
-                    <div class="form-outline mb-4">
+                    <!-- <div class="form-outline mb-4">
                         <input type="password" id="registerPassword" class="form-control" />
                         <label class="form-label" for="registerPassword">Password</label>
                     </div>
 
                     <!-- Repeat Password input -->
-                    <div class="form-outline mb-4">
+                    <!-- <div class="form-outline mb-4">
                         <input type="password" id="registerRepeatPassword" class="form-control" />
                         <label class="form-label" for="registerRepeatPassword">Repeat password</label>
                     </div>
 
                     <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
+        <!-- <div class="form-check d-flex justify-content-center mb-4">
             <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
                 aria-describedby="registerCheckHelpText" />
             <label class="form-check-label" for="registerCheck">
@@ -65,9 +65,94 @@
         </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
+                    <!-- <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
                 </form>
             </div>
         </div>
     </div>
+</section>
+
+
+-->
+
+
+
+<section class="vh-100">
+  <div class="container-fluid h-custom" style="margin-top: 10rem;">
+    <div class="row d-flex justify-content-center align-items-center"></div>
+    <div class="d-flex flex-row align-items-center justify-content-center ">
+      <p class="lead fw-normal mb-0 me-3">
+      <h3>Register in CoreRent</h3>
+      </p>
+      <br>
+      <hr>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+        <form action="/admin/add" method="post">
+
+          <!-- Name input -->
+          <div class="form-outline mb-4 ">
+            <label class="form-label ms-2" for="registerName">Full Name</label>
+            <input type="text" id="registerName" class="form-control" placeholder="Enter your FullName" required />
+          </div>
+
+          <!-- Username input -->
+          <div class="form-outline mb-4">
+            <label class="form-label ms-2" for="registerUsername">Username</label>
+            <input type="text" id="registerUsername" class="form-control" placeholder="Enter UserName" required />
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label ms-2" for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" class="form-control" placeholder="Enter your Valid Email-id"
+              required />
+          </div>
+
+          <!-- Phone input -->
+          <div class="form-outline mb-4">
+            <label class="form-label ms-2" for="registerPhone">PhoneNo</label>
+            <input type="text" id="registerPhone" class="form-control" placeholder="Enter your Valid PhoneNo"
+              required />
+          </div>
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label ms-2" for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" class="form-control" placeholder="Enter Password"
+              autocomplete="off" required />
+          </div>
+
+          <!-- Repeat Password input 
+          <div class="form-outline mb-4">
+            <label class="form-label ms-2" for="registerRepeatPassword">Repeat password</label>
+            <input type="password" id="registerRepeatPassword" class="form-control" placeholder=" Ree Enter Password"
+              autocomplete="off" required />
+          </div>-->
+
+          <!-- Checkbox
+          <div class="form-check d-flex mb-0">
+            <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck"
+              aria-describedby="registerCheckHelpText" required />
+            <label class="form-check-label" for="registerCheck">I have read and agree to the terms</label>
+          </div> -->
+
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account?<i class="bi bi-arrow-right"></i> <a
+                href="/signin" class="link-danger">Sign in</a>
+            </p>
+          </div>
+        </form>
+        <br><br><br>
+      </div>
+    </div>
+  </div>
 </section>
