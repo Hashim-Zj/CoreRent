@@ -4,10 +4,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const fileUpload = require("express-fileupload");
 
-
 var indexRouter = require('./routes/user');
 var adminRouter = require('./routes/admin');
-
 
 const express = require('express');
 const { extname } = require('path');
@@ -15,6 +13,7 @@ const { engine } = require('express-handlebars');
 //var hbs=require('express-handlebars');
 //var fileUpload=require('express-fileupload')
 var db=require('./config/connection')
+var session=require("express-session")
 const app = express();
 
 
@@ -30,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload());
+app.use(session({secret:"hashimkey",cookie:{maxAge:60000}}))
 
 db.connect((err)=>{
   if(err) console.log("Database Connection Error :"+err);

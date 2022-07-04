@@ -1,62 +1,64 @@
-<header>
-    <!--Navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="nav navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img src="https://blog.getbootstrap.com/assets/brand/bootstrap-logo-shadow.png" alt="" width="30"
-                        height="24" class="d-inline-block align-text-top">
-                    CoreRent#user
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="signup.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link34</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2 " style="margin:10px;" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <a class="btn btn-outline-dark" style="width: 30ren; height:f20rem;margin: 10px;"><i class="bi bi-search"></i></a>
-                    <a href="/signin" class="btn btn-dark w-auto ml-auto ">Sign in</a>
-                    
-                </form>
-
-            </div>
-
-            <div class="btn-group ml-auto" role="group" aria-label="Basic example">
-
-
-                <a href="/signup" class="btn btn-success w-auto ml-auto ">Sign up</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-bs-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!--Navbar-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="nav navbar-header">
+            <a class="navbar-brand" href="/">
+                <img src="https://blog.getbootstrap.com/assets/brand/bootstrap-logo-shadow.png" alt="" width="30"
+                    height="24" class="d-inline-block align-text-top">
+                CoreRent#user
+            </a>
         </div>
-    </nav>
-</header>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Catogery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Ofers</a>
+                </li>
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/orders">MyOrders</a>
+                </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/carts">MyCart</a>
+                </li>
+
+            </ul>
+            <form class="d-flex">
+
+                {{#if user}}
+                <a href="/signout" class="btn btn-secondary w-auto ml-auto  me-2">SignOut </a>
+                {{else}}
+                <a href="/signin" class="btn btn-secondary w-auto ml-auto me-2">SignIn </a>
+                {{/if}}
+
+            </form>
+
+        </div>
+
+        <div class="btn-group ml-auto" role="group" aria-label="Basic example">
+
+
+            <a href="/signup" class="btn btn-success w-auto ml-auto ">
+                {{#if user}}
+                {{user.registerUsername}}
+                {{else}}
+                Sign up
+                {{/if}}
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-bs-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
