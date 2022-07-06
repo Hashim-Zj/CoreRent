@@ -18,8 +18,11 @@
 <body>
     {{#if admin}}
     {{>admin-index}}
-    {{else}}
+  
+    {{/if}}
+    {{#if user_1}}
     {{>user-index}}
+    
     {{/if}}
     {{{body}}}
     <!-- Optional JavaScript; choose one of the two! -->

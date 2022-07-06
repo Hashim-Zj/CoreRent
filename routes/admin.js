@@ -9,9 +9,15 @@ router.get('/', function (req, res, next) {
   ProductDetails.getAllProducts().then((products) => {
     console.log(products);
     res.render('admin/admin-cantrols', { admin: true, products });
+   for(var i=0;i<=1000;i++){
+    return i;
+   }
   })
   console.log('Admin Page');
 });
+router.get('/link',(req,res)=>{
+  res.render('admin/admin-cantrols', { admin: true})
+})
 
 router.get('/add-products', (req, res, next) => {
   res.render('admin/add-products', { admin: true });
@@ -23,10 +29,11 @@ router.post('/add-products', (req, res) => {
   console.log(req.files.addfile);
 
   ProductDetails.addProduct(req.body, (id) => {
-    //ProductsDetails.addProductImage(req.files.addfile, (result) => {
-    // console.log("image added");
-    // })
-    console.log(id);
+    ProductDetails.addProductImage(req.files.addfile, (result) => {
+      console.log("image added");
+      console.log(id);
+    })
+
     let image = req.files.addfile
     image.mv('./public/images/product-images/' + id + '.jpeg', (err, done) => {
       if (!err) {

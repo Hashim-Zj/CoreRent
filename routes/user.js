@@ -17,13 +17,13 @@ router.get('/', function (req, res, next) {
   console.log(user);
   ProductDetails.getAllProducts().then((products) => {
     //console.log(products);
-    res.render('user/index', { products, user })
+    res.render('user/index', {user_1: true ,products, user })
   })
 
 });
 router.get('/signin', (req, res) => {
   if (req.session.logedIn) {
-    res.redirect('/');
+    res.redirect('/',{user_1: true });
   } else{
    
     res.render('user/signin',{loginE:req.session.loginError});
@@ -32,13 +32,10 @@ router.get('/signin', (req, res) => {
 })
 router.get('/signup', (req, res) => {
   res.render('user/signup');
-  //console.log('kkkkkkkkkkkkk');
 })
 router.post('/signup', (req, res) => {
-  //console.log('post signup');
-  //console.log(req.body); 
   userDetails.doSignup(req.body).then((response) => {
-    console.log(response+"ooooooooooooooooo");
+    console.log(response);
   })
 })
 router.post('/signin', (req, res) => {
