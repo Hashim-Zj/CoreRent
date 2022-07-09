@@ -36,6 +36,7 @@ router.get('/signup', (req, res) => {
 router.post('/signup', (req, res) => {
   userDetails.doSignup(req.body).then((response) => {
     console.log(response);
+    res.redirect('/')
   })
 })
 router.post('/signin', (req, res) => {
@@ -65,7 +66,7 @@ router.post('/add-f', (req, res) => {
   console.log('forgott pass');
   res.send('Forgott Password')
 })
-router.get('/carts',yourInLogedIn, (req, res,next) => {
+router.get('/cart',yourInLogedIn, (req, res,next) => {
   res.render('user/cart')
 })
 
