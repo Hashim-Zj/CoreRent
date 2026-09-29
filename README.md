@@ -54,10 +54,15 @@ GitHub Pages serves static files only. This application:
 3. Requires a live MongoDB database for products, users and carts.
 
 The Pages configuration on this repository points at the repository root of
-`master` (legacy mode). Because that root contains no `index.html`, the site
-returns **404**. The `.github/workflows/pages.yml` workflow present in the
-repository is not the active build — the Pages site is in `legacy` mode, so
-that workflow does not run.
+`master` (legacy mode). Because that root contains no `index.html`, GitHub
+Pages has nothing to serve. Visiting the URL renders **this README as HTML** —
+that is GitHub's fallback behaviour when a legacy Pages site has no
+`index.html`, not a working application. Before this README was added, the URL
+returned a plain 404.
+
+The `.github/workflows/pages.yml` workflow present in the repository is not the
+active build — the Pages site is in `legacy` mode, so that workflow does not
+run.
 
 This is not fixable by changing the Pages source. Disabling Pages on this
 repository is the correct resolution, but that is a destructive change to
