@@ -1,0 +1,36 @@
+# Dependencies
+# NOTE: node_modules/ is already tracked in this repository's history
+# (4,710 files, ~39 MB). This .gitignore stops it growing further; removing
+# the existing copies would require a history rewrite.
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+credentials*
+secrets*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Test and coverage output
+coverage/
+.nyc_output/
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local scratch
+tmp/
+*.tmp
